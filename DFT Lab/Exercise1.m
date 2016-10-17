@@ -1,0 +1,11 @@
+%fsamp = 25600;
+%fsig = 1000;
+y = sinegen(25600, 1000, 127);
+%tsamp = 1/fsamp;
+%t = 0 : tsamp : 127 * tsamp;
+%y = sin(2*pi*fsig*t);
+plot(y);
+grid;
+title('Simple sine wave');
+xlabel ('Time');
+ylabel('Amplitude');
