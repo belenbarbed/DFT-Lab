@@ -3,14 +3,14 @@ load unknown;
 b = [0.0039 0.0193 0.0386 0.0386 0.0193 0.0039];
 a = [1.000 -2.3745 2.6360 -1.5664 0.4929 -0.0646];
 
-x(1:64) = zeros(1, 64);
+x(1:16) = zeros(1, 16);
 x(1) = 1;
 
 y = filter(b, a, x);
-yf = fft(y);
+%yf = fft(y);
 ampliy = ampli(yf);
 plot(ampliy);
 
 title('Impulse Response of the Butterwoth Filter (time domain)');
-xlabel ('Sample Index');
+xlabel ('Time');
 ylabel('Amplitude');
